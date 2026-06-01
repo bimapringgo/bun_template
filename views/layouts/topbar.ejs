@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3">
+    <div class="container-fluid">
+        <button class="btn btn-outline-secondary shadow-none" id="sidebarToggle">
+            <i class="bi bi-list fs-5"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+                
+                <li class="nav-item me-3">
+                    <a class="nav-link position-relative" href="#">
+                        <i class="bi bi-bell fs-5"></i>
+                        <span class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        
+                        <span class="account-user-avatar">
+                            <img src="https://github.com/mdo.png" alt="user profile" width="32" height="32" class="rounded-circle">
+                        </span>
+
+                        <span class="d-none d-lg-flex flex-column align-items-start text-start" style="line-height: 1.2;">
+                            <strong class="text-dark"><%= user %></strong>
+                            <small class="text-muted"><%= user_role %></small>
+                        </span>
+                    </a>
+                    
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
+                        <a class="dropdown-item" href="#" id="download_manual" onclick="return false">
+                            <i class="ri-book-fill align-middle me-1"></i>Manual Guide
+                        </a>
+                        <a href="/logout" class="dropdown-item">
+                            <i class="ri-logout-box-fill align-middle me-1"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>

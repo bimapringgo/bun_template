@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../layouts/head'); -%>
+
+    <!-- <link rel="stylesheet" href="/assets/ag-grid/styles/ag-grid.css">
+    <link rel="stylesheet" href="/assets/ag-grid/styles/ag-theme-alpine.css"> -->
+</head>
+<body>
+  
+    <div id="wrapper">                
+      <%- include('../layouts/sidebar'); -%>        
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper" class="bg-light">            
+
+
+        <%- include('../layouts/topbar'); -%>
+        <!-- Main Content Container -->
+        <div class="container-fluid p-4">
+            <h2>Create a New File</h2>
+    
+    <label for="fileName">File Name:</label><br>
+    <input type="text" id="fileName" placeholder="example.txt" style="width: 300px;"><br><br>
+
+    <label for="textContent">Content:</label><br>
+    <textarea id="textContent" rows="15" style="width: 100%; max-width: 600px;" placeholder="Type your text here..."></textarea><br><br>
+
+    <button id="saveBtn">Save File to Server</button>
+
+    <script src="/assets/custom.js"></script>
+    <script>
+        document.getElementById('saveBtn').addEventListener('click', () => {
+            const filename = document.getElementById('fileName').value;
+            const content = document.getElementById('textContent').value;
+
+            if (!filename || !content) {
+                alert('Please provide both a filename and content!');
+                return;
+            }
+
+            // Using your Action-Based routing format: sending an "a" (action) key
+            const payload = {
+                a: 'save_file',
+                filename: filename,
+                content: content
+            };
+
+            // Pointing to your central page data endpoint
+            ajaxPost('/editor-data', payload, (response) => {
+                alert(response.message || 'File saved successfully!');
+            }, (error) => {
+                console.error('Failed to save file:', error);
+            });
+        });
+    </script>
+
+        </div>
+      </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- <script src="/assets/ag-grid/ag-grid-enterprise.min.js"></script> -->
+    <script src="/scr/projects/projects.js"></script>
+    <%- include('../layouts/footer'); -%>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../layouts/head'); -%>
+
+    <!-- <link rel="stylesheet" href="/assets/ag-grid/styles/ag-grid.css">
+    <link rel="stylesheet" href="/assets/ag-grid/styles/ag-theme-alpine.css"> -->
+</head>
+<body>
+  
+    <div id="wrapper">                
+      <%- include('../layouts/sidebar'); -%>        
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">            
+
+
+        <%- include('../layouts/topbar'); -%>
+        <!-- Main Content Container -->
+        <div class="container-fluid p-4">
+            <h2 class="mb-4">Dashboard Overview</h2>
+            
+            <!-- Info Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="bg-primary text-white rounded p-3 me-3">
+                                <i class="bi bi-currency-dollar fs-3"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-1">Total Sales</h6>
+                                <h4 class="mb-0">$24,500</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="bg-success text-white rounded p-3 me-3">
+                                <i class="bi bi-cart-check fs-3"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-1">New Orders</h6>
+                                <h4 class="mb-0">145</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="bg-warning text-white rounded p-3 me-3">
+                                <i class="bi bi-people fs-3"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-1">New Users</h6>
+                                <h4 class="mb-0">32</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="bg-danger text-white rounded p-3 me-3">
+                                <i class="bi bi-graph-down fs-3"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-1">Bounce Rate</h6>
+                                <h4 class="mb-0">12%</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Chart/Table Area -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0">
+                    <h5 class="card-title">Recent Activity</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#10245</td>
+                                    <td>John Doe</td>
+                                    <td>May 18, 2026</td>
+                                    <td><span class="badge bg-success">Completed</span></td>
+                                    <td>$124.00</td>
+                                </tr>
+                                <tr>
+                                    <td>#10246</td>
+                                    <td>Jane Smith</td>
+                                    <td>May 19, 2026</td>
+                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                    <td>$85.50</td>
+                                </tr>
+                                <tr>
+                                    <td>#10247</td>
+                                    <td>Bob Johnson</td>
+                                    <td>May 19, 2026</td>
+                                    <td><span class="badge bg-danger">Cancelled</span></td>
+                                    <td>$42.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- <script src="/assets/ag-grid/ag-grid-enterprise.min.js"></script> -->
+    <script src="/scr/dashboard/dashboard.js"></script>
+    <%- include('../layouts/footer'); -%>
+</body>
+</html>

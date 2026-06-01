@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../layouts/head'); -%>
+</head>
+<body>
+
+    <div id="wrapper">
+        
+        <!-- Sidebar -->
+        <nav id="sidebar" class="d-flex flex-column text-white pt-3">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none px-3">
+                <i class="bi bi-bootstrap fs-3 me-2"></i>
+                <span class="fs-4 fw-bold">AdminPro</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <i class="bi bi-house-door me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-speedometer2 me-2"></i> Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-table me-2"></i> Orders
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-grid me-2"></i> Products
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-person-circle me-2"></i> Customers
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown px-3 pb-4">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Admin</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /#sidebar -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="bg-light">
+            
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-3">
+                <div class="container-fluid">
+                    <button class="btn btn-outline-secondary shadow-none" id="sidebarToggle">
+                        <i class="bi bi-list fs-5"></i>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link position-relative" href="#">
+                                    <i class="bi bi-bell fs-5"></i>
+                                    <span class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content Container -->
+            <div class="container-fluid p-4">
+                <h2 class="mb-4">Dashboard Overview</h2>
+                
+                <!-- Info Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="bg-primary text-white rounded p-3 me-3">
+                                    <i class="bi bi-currency-dollar fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1">Total Sales</h6>
+                                    <h4 class="mb-0">$24,500</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="bg-success text-white rounded p-3 me-3">
+                                    <i class="bi bi-cart-check fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1">New Orders</h6>
+                                    <h4 class="mb-0">145</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="bg-warning text-white rounded p-3 me-3">
+                                    <i class="bi bi-people fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1">New Users</h6>
+                                    <h4 class="mb-0">32</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex align-items-center">
+                                <div class="bg-danger text-white rounded p-3 me-3">
+                                    <i class="bi bi-graph-down fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1">Bounce Rate</h6>
+                                    <h4 class="mb-0">12%</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Chart/Table Area -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-bottom-0 pt-4 pb-0">
+                        <h5 class="card-title">Recent Activity</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#10245</td>
+                                        <td>John Doe</td>
+                                        <td>May 18, 2026</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td>$124.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#10246</td>
+                                        <td>Jane Smith</td>
+                                        <td>May 19, 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                        <td>$85.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#10247</td>
+                                        <td>Bob Johnson</td>
+                                        <td>May 19, 2026</td>
+                                        <td><span class="badge bg-danger">Cancelled</span></td>
+                                        <td>$42.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <%- include('../layouts/footer'); -%>
+</body>
+</html>

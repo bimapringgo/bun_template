@@ -1,0 +1,62 @@
+<!-- Sidebar -->
+        <nav id="sidebar" class="d-flex flex-column text-white pt-3">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none px-3">
+                <i class="bi bi-bootstrap fs-3 me-2"></i>
+                <span class="fs-4 fw-bold">AdminPro</span>
+            </a>
+            <hr>                        
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <i class="bi bi-house-door me-2"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-speedometer2 me-2"></i> Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-table me-2"></i> Characters
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-grid me-2"></i> Files
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#userManagementSubmenu" 
+                    class="nav-link text-white d-flex align-items-center justify-content-between" 
+                    data-bs-toggle="collapse" 
+                    role="button" 
+                    aria-expanded="false" 
+                    aria-controls="userManagementSubmenu">
+                        <div>
+                            <i class="bi bi-people me-2"></i>
+                            User Management
+                        </div>
+                        <i class="bi bi-chevron-down fs-7"></i>
+                    </a>
+                    
+                    <div class="collapse" id="userManagementSubmenu">
+                        <ul class="nav nav-pills flex-column ps-4 pt-1 small">
+                            <li class="nav-item">
+                                <a href="/users" class="nav-link text-white-50">
+                                    <i class="bi bi-person-lines-fill me-2"></i> User List
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/roles" class="nav-link text-white-50">
+                                    <i class="bi bi-shield-lock me-2"></i> Role List
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            
+        </nav>
+        <!-- /#sidebar -->
